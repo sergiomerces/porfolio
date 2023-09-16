@@ -2,12 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/*resetar o css a página*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*estilos do body e formulários*/
 body,
 button,
 input,
@@ -20,6 +22,7 @@ body {
     background-color: #ece8e8;
 }
 
+/*estos do header*/
 header {
     background-color: #fff;
     height: 80px;
@@ -61,10 +64,21 @@ header #navbar .nav-list .nav-item a:hover {
     transition: color 300ms;
 }
 
+header #navbar .menu-hamburguer img {
+    width: 2.25rem;
+    height: 2rem;
+}
+
+header #navbar .menu-hamburguer {
+    display: none;
+}
+
+/*estilos do main*/
 main {
     margin-top: 6rem;
 }
 
+/*estilos da seção banner*/
 main #banner {
     display: flex;
     justify-content: space-between;
@@ -104,6 +118,7 @@ main #banner .banner-img {
     max-width: 25rem;
 }
 
+/*estilos da seção publicações*/
 section#posts {
     margin-top: 4.4375rem;
     padding-bottom: 2.5rem;
@@ -156,6 +171,7 @@ section#posts .posts-content .posts-cards .post-card span {
     margin-bottom: 1.5rem;
 }
 
+/*estilos do footer*/
 footer {
     display: flex;
     justify-content: center;
@@ -167,4 +183,35 @@ footer {
     height: 4rem;
 }
 
-/*parei em 1:04*/
+/*estilos responsivos*/
+@media (max-width: 900px) {
+    main #banner {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    main #banner .banner-content {
+        text-align: center;
+    }
+}
+
+@media (max-width: 740px) {
+    section#posts .posts-content .posts-cards {
+        flex-direction: column;
+    }
+}
+
+/*estilo menu hamburguer*/
+@media (max-width: 740px) {
+    header #navbar .menu-hamburguer {
+        display:block;
+        justify-content: end;
+    }
+
+    header #navbar .nav-list {
+        display: none;
+    }
+}
+
+/*para gerar links do menu hamburguer precisamos de JS*/
