@@ -156,6 +156,7 @@ section#posts .posts-content .posts-cards {
 section#posts .posts-content .posts-cards .post-card {
     background-color: #fff;
     padding: 1.5rem;
+    width: 50%;
 }
 
 section#posts .posts-content .posts-cards .post-card h3 {
@@ -168,6 +169,10 @@ section#posts .posts-content .posts-cards .post-card span {
     display: block;
     font-size: 1.125rem;
     margin-bottom: 1.5rem;
+}
+
+section#posts .posts-content .posts-cards .post-card .article {
+    text-align: end;
 }
 
 /*estilo mídias sociais*/
@@ -209,6 +214,10 @@ footer {
 @media (max-width: 740px) {
     section#posts .posts-content .posts-cards {
         flex-direction: column;
+    }
+
+    section#posts .posts-content .posts-cards .post-card {
+        width: auto;
     }
 }
 
